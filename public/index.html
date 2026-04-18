@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azlan Ul Haque | MERN Stack Developer Portfolio</title>
+
+    <meta name="description"
+        content="Azlan Ul Haque is a MERN Stack Developer building modern, fast and scalable web applications using React, Node.js, MongoDB and AI." />
+
+    <meta name="keywords"
+        content="Azlan Ul Haque, MERN Developer, React Developer, Node.js Developer, Web Developer Portfolio, AI Web Developer" />
+
+    <meta name="author" content="Azlan Ul Haque" />
+
+    <meta property="og:title" content="Azlan Ul Haque | MERN Stack Developer" />
+    <meta property="og:description"
+        content="MERN Stack Developer portfolio with projects, blogs and AI-powered web apps." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://azlan-s-portfolio.web.app" />
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- PARTICLES BACKGROUND -->
+    <canvas id="particles"></canvas>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <svg width="40" height="40">
+                <text x="0" y="30" fill="#00ffcc" font-size="32" font-family="Poppins" font-weight="700">
+                    AZ
+                </text>
+            </svg>
+            <span>AzlanDev</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="blog.html"></a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="/resume.pdf" class="resume-btn" target="_blank" rel="noopener">
+            Resume
+        </a>
+
+        <!-- Hamburger (INSIDE HEADER) -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="blog.html"></a>
+        <a href="resume.pdf" class="resume-link" download>Resume</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero reveal">
+        <div class="container">
+            <div class="hero-text">
+                <h1>
+                    Hi, I'm <span class="highlight">Azlan Ul Haque</span>
+                </h1>
+
+                <h2 class="typewriter">MERN Stack Developer</h2>
+
+                <p>
+                    I build modern, fast & scalable web applications using the MERN stack.
+                    I focus on clean UI, performance, and real-world problem solving.
+                </p>
+
+                <a href="#contact" class="btn">Let's Work Together</a>
+            </div>
+            <br>
+
+
+            <div class="hero-img">
+                <div class="glass-card tilt">
+                    <img src="images/profile.jpg" alt="Azlan Ul Haque" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects reveal">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card tilt">
+                    <div class="glow"></div>
+                    <h3>AI Chatbot</h3>
+                    <p>MERN based chatbot using AI APIs with memory & auth.</p>
+                </div>
+
+                <div class="project-card tilt">
+                    <div class="glow"></div>
+                    <h3>E-Commerce App</h3>
+                    <p>Full-stack MERN shop with admin dashboard.</p>
+                </div>
+
+                <div class="project-card tilt">
+                    <div class="glow"></div>
+                    <h3>Real-Time Chat</h3>
+                    <p>Socket.io based chat with live status.</p>
+                </div>
+
+                <div class="project-card tilt">
+                    <div class="glow"></div>
+                    <h3>AI Image Generator</h3>
+                    <p>Image generation using AI APIs.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills reveal">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skill-bars">
+
+                <div class="skill">
+                    <p>MongoDB</p>
+                    <div class="bar">
+                        <span data-width="80%"></span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Express.js</p>
+                    <div class="bar">
+                        <span data-width="82%"></span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>React</p>
+                    <div class="bar">
+                        <span data-width="90%"></span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <p>Node.js</p>
+                    <div class="bar">
+                        <span data-width="85%"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I’m a MERN Stack Developer and final-year Diploma student (IT, 2023–2026).
+                I enjoy building clean interfaces, learning new technologies,
+                and creating real-world applications.
+            </p>
+        </div>
+    </section>
+    <!-- BLOG PREVIEW -->
+    <section class="reveal">
+        <div class="container">
+            <h2 class="section-title">Latest Blogs</h2>
+
+            <div class="blog-post">
+                <h3>Why I Learn MERN Even in AI Era</h3>
+                <p>
+                    AI is powerful, but real developers still need strong fundamentals.
+                    In this blog I explain why MERN matters in 2025.
+                </p>
+
+                <a href="blog.html" class="btn">Read Full Blog</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+                    <span>Email</span>
+                    <a href="mailto:azlanulhaque9@gmail.com">
+                        azlanulhaque9@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>GitHub</span>
+                    <a href="https://github.com/Azlan-Ul-Haque-git" target="_blank">
+                        github.com/Azlan-Ul-Haque-git
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/azlan-ul-haque-92b978267" target="_blank">
+                        linkedin.com/in/azlan-ul-haque
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            © 2025 Azlan Ul Haque — MERN Stack Developer
+            <br>
+            <p>MERN Stack Developer based in India</p>
+
+        </div>
+    </footer>
+
+    <!-- Resume Download Popup -->
+    <div class="resume-popup" id="resumePopup">
+        <span>📄 Resume Opened successfully</span>
+    </div>
+
+
+    <!-- HAMBURGER SCRIPT -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            mobileMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                mobileMenu.classList.remove("active");
+            });
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
