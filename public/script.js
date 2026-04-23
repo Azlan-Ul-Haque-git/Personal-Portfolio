@@ -108,7 +108,7 @@ function typeLoop() {
         if (charIndex === current.length) {
             typing = false;
             setTimeout(typeLoop, 1200);
-            return;   
+            return;
         }
     } else {
         charIndex--;
@@ -188,6 +188,8 @@ const resumePopup = document.getElementById("resumePopup");
 
 if (resumeBtn && resumePopup) {
     resumeBtn.addEventListener("click", () => {
+        console.log('Resume Downloades');
+
 
         // show popup
         resumePopup.classList.add("show");
@@ -199,16 +201,74 @@ if (resumeBtn && resumePopup) {
     });
 }
 
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", e => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
 
 
 
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const height = document.body.scrollHeight - window.innerHeight;
+    const progress = (scroll / height) * 100;
+    document.getElementById("progressBar").style.width = progress + "%";
+});
 
+(function () {
+    emailjs.init("2swD3ynH_Z-wE_iew");
+})();
 
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("popupMsg");
 
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        const btn = form.querySelector(".send-btn");
 
+        btn.classList.add("loading");
+        btn.disabled = true;
 
+        emailjs.sendForm(
+            "service_nfy6vw6",
+            "template_loa2fg8",
+            this
+        ).then(() => {
 
+            popup.innerHTML = "✅ Message Sent Successfully!";
+            popup.classList.add("show");
+
+            clearTimeout(window.popupTimer);
+            window.popupTimer = setTimeout(() => {
+                popup.classList.remove("show");
+            }, 3000);
+
+            form.reset();
+
+            btn.classList.remove("loading");
+            btn.disabled = false;
+
+        }).catch(() => {
+
+            popup.innerHTML = "❌ Failed to send message!";
+            popup.classList.add("show");
+
+            clearTimeout(window.popupTimer);
+            window.popupTimer = setTimeout(() => {
+                popup.classList.remove("show");
+            }, 3000);
+
+            btn.classList.remove("loading");
+            btn.disabled = false;
+        });
+    });
+}
 
 
 
