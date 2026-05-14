@@ -184,8 +184,8 @@ header nav a:hover {
     margin-top: 22px;
     padding: 12px 22px;
     background: linear-gradient(90deg,
-            rgba(0, 255, 153, .18),
-            rgba(0, 255, 153, .08));
+            rgba(76, 90, 84, 0.18),
+            rgba(74, 191, 144, 0.08));
     border-radius: 10px;
     color: #061114;
     font-weight: 800;
@@ -794,6 +794,7 @@ html {
     border-color: #00ff99;
     box-shadow: 0 0 20px rgba(0, 255, 153, .08);
 }
+
 .project-card {
     padding: 24px;
     border-radius: 20px;
@@ -805,6 +806,7 @@ html {
 .project-card:hover {
     transform: translateY(-8px) scale(1.02);
 }
+
 /* TEXT PREMIUM CARD */
 .premium-card {
     position: relative;
